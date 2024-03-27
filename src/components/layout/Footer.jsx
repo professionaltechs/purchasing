@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#120059] pt-14 pb-8 lg:pt-12 mt-24">
+    <div className="bg-[#120059] pt-14 pb-8 lg:pt-12">
       <div className="flex justify-evenly max-w-sm m-auto px-4 lg:max-w-xl">
         <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 bg-white hover:bg-[#fed700] rounded-full cursor-pointer lg:text-2xl ">
           <FaFacebookF />

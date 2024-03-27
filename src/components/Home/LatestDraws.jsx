@@ -15,25 +15,25 @@ const LatestDraws = () => {
           the ultimate prize – start your winning journey now!
         </p>
       </div>
-      <div className="latestDraws mt-16 py-12 px-3 sm:px-5 w-11/12 max-w-lg mx-auto rounded-3xl shadow-2xl bg-[#F5F5DC] lg:min-w-[440px]">
+      <div className="latestDraws mt-16 py-12 px-3 sm:px-5 w-11/12 max-w-lg mx-auto rounded-3xl shadow-2xl bg-[#F5F5DC] lg:min-w-[440px] lg:mr-0">
         <h1 className="text-center text-3xl font-semibold">
           Latest Draw results
         </h1>
         <h5 className="text-center font-medium mt-4">10.3.2024</h5>
-        <div className="flex justify-evenly mt-6 font-bold text-[#120059]">
-          <div className="bg-[#fed700] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
+        <div className="flex justify-evenly mt-6 font-bold text-[#fed700]">
+          <div className="bg-[#120059] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
             <p>02</p>
           </div>
-          <div className="bg-[#fed700] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
+          <div className="bg-[#120059] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
             <p>42</p>
           </div>
-          <div className="bg-[#fed700] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
+          <div className="bg-[#120059] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
             <p>10</p>
           </div>
-          <div className="bg-[#fed700] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
+          <div className="bg-[#120059] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
             <p>39</p>
           </div>
-          <div className="bg-[#fed700] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
+          <div className="bg-[#120059] min-w-10 min-h-10 rounded-full flex items-center justify-center lg:min-w-12 lg:min-h-12">
             <p>21</p>
           </div>
         </div>

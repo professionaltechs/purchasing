@@ -1,19 +1,25 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from 'swiper/modules';
+import { Pagination } from "swiper/modules";
 
 // STYLING
 import "swiper/css";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 
 const Carousel = () => {
   return (
-    <div className="mt-10">
-      <Swiper spaceBetween={50} slidesPerView={1} loop={true} pagination={{clickable: true}} modules={[Pagination]} >
+    <div className="pt-10">
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        loop={true}
+        pagination={{ clickable: true }}
+        modules={[Pagination]}
+      >
         <SwiperSlide>
           <div
             role="status"
-            className="flex items-center justify-center h-72 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700 w-11/12 max-w-6xl mx-auto"
+            className="flex items-center justify-center h-96 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700 w-11/12 max-w-6xl mx-auto"
           >
             <svg
               className="w-10 h-10 text-gray-200 dark:text-gray-600"
@@ -31,7 +37,7 @@ const Carousel = () => {
         <SwiperSlide>
           <div
             role="status"
-            className="flex items-center justify-center h-72 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700 w-11/12 max-w-6xl mx-auto"
+            className="flex items-center justify-center h-96 bg-gray-300 rounded-lg animate-pulse dark:bg-gray-700 w-11/12 max-w-6xl mx-auto"
           >
             <svg
               className="w-10 h-10 text-gray-200 dark:text-gray-600"
