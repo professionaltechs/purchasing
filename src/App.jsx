@@ -9,6 +9,10 @@ import Layout from "./components/layout/Layout";
 // PAGES
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
+
+import Prizes from "./pages/play/Prizes";
+import HowToPlay from "./pages/play/HowToPlay";
 
 function App() {
   return (
@@ -17,6 +21,9 @@ function App() {
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home />} />
           <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="play/prizes" element={<Prizes />} />
+          <Route path="play/how-to-play" element={<HowToPlay />} />
         </Route>
       </Routes>
     </BrowserRouter>

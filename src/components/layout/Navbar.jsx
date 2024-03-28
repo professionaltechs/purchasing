@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // ICONS
 import { IoIosMenu } from "react-icons/io";
@@ -37,6 +38,14 @@ const Navbar = () => {
     lastScrollTop = st <= 0 ? 0 : st;
   };
 
+  const handleNavbarPosition = () => {
+    const requiredStickyValue =
+      document.getElementsByClassName("navbarTop")[0].clientHeight;
+    stikyValue = requiredStickyValue;
+    document.getElementsByClassName("navbarDropDowns")[0].style.top =
+      requiredStickyValue + "px";
+  };
+
   useEffect(() => {
     const requiredStickyValue =
       document.getElementsByClassName("navbarTop")[0].clientHeight;
@@ -44,8 +53,10 @@ const Navbar = () => {
     document.getElementsByClassName("navbarDropDowns")[0].style.top =
       requiredStickyValue + "px";
     document.addEventListener("scroll", scrollAnimation);
+    window.addEventListener("resize", handleNavbarPosition);
     return () => {
       document.removeEventListener("scroll", scrollAnimation);
+      window.removeEventListener("resize", handleNavbarPosition);
     };
   }, []);
 
@@ -55,30 +66,38 @@ const Navbar = () => {
   return (
     <>
       <div className="navbarTop flex items-center justify-between bg-[#120059]  text-white sticky top-0 z-50 py-4 px-6 md:py-6 md:px-10 lg:py-8 lg:px-14 ">
-        <h1 className="text-3xl">LOGO</h1>
+        <Link to="/" className="text-3xl">
+          LOGO
+        </Link>
         <IoIosMenu className="md:hidden" />
         <div className="hidden md:flex items-center gap-7 lg:gap-12">
           <div className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
             <BsCreditCard className="lg:text-xl" />
             <p>Buy Now</p>
           </div>
-          <div className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
+          <Link
+            to="/login"
+            className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]"
+          >
             <MdLogin className="lg:text-xl" />
             <p>Login</p>
-          </div>
-          <div className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
+          </Link>
+          <Link
+            to="/register"
+            className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]"
+          >
             <FaUserPlus className="lg:text-xl" />
             <p>Register</p>
-          </div>
+          </Link>
           <div className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
             <FaOpencart className="lg:text-xl" />
             <p>Cart </p>
           </div>
         </div>
       </div>
-      <div className="navbarDropDowns sticky py-3 z-40 bg-[#F5F5F5]">
+      <div className="hidden md:block navbarDropDowns sticky py-3 z-40 bg-[#F5F5F5]">
         <div className="flex w-11/12 max-w-6xl justify-between mx-auto font-medium">
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-7 lg:gap-10">
             <div
               className={`dropDowns flex items-center gap-2 relative ${
                 activeDropDown == 1 ? "activeElement" : ""
@@ -95,19 +114,13 @@ const Navbar = () => {
               >
                 <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
                   <p>Buy Now</p>
-                  <p>Prizes</p>
-                  <p>Find a kiosk</p>
-                  <p>Find a Store</p>
-                  <p>How to play</p>
-                  <p>How to add credit</p>
-                  <p>How to withdraw</p>
-                  <p>Recurring purchase</p>
-                  <p>FAQ</p>
+                  <Link to="/play/prizes">Prizes</Link>
+                  <Link to="/play/how-to-play">How to play</Link>
                 </div>
               </div>
             </div>
             <div
-              className={`dropDowns flex items-center gap-2 cursor-pointer relative ${
+              className={`dropDowns flex items-center gap-2 relative ${
                 activeDropDown == 2 ? "activeElement" : ""
               }`}
               onMouseEnter={() => setActiveDropDown(2)}
@@ -128,7 +141,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className={`dropDowns flex items-center gap-2 cursor-pointer relative ${
+              className={`dropDowns flex items-center gap-2 relative ${
                 activeDropDown == 3 ? "activeElement" : ""
               }`}
               onMouseEnter={() => setActiveDropDown(3)}
@@ -150,9 +163,9 @@ const Navbar = () => {
             <p className="dropDowns cursor-pointer">LATEST NEWS</p>
             <p className="cursor-pointer">ABOUT US</p>
           </div>
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-7 lg:gap-10">
             <div
-              className={`dropDowns flex items-center gap-2 cursor-pointer relative ${
+              className={`dropDowns flex items-center gap-2 relative ${
                 activeDropDown == 4 ? "activeElement" : ""
               }`}
               onMouseEnter={() => setActiveDropDown(4)}
@@ -162,7 +175,7 @@ const Navbar = () => {
               <FaAngleDown />
             </div>
             <div
-              className={`dropDowns flex items-center gap-2 cursor-pointer relative ${
+              className={`dropDowns flex items-center gap-2 relative ${
                 activeDropDown == 5 ? "activeElement" : ""
               }`}
               onMouseEnter={() => setActiveDropDown(5)}
@@ -177,7 +190,7 @@ const Navbar = () => {
               >
                 <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
                   <p>English</p>
-                  <p>Fraud awareness</p>
+                  <p>Arabic</p>
                 </div>
               </div>
             </div>
