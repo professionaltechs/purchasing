@@ -23,8 +23,8 @@ const Prizes = () => {
         <span className="sr-only">Loading...</span>
       </div>
 
-      <div className="px-3 lg:px-10 max-w-[1160px] mx-auto">
-        <h1 className="text-3xl text-center mt-14 lg:mt-20 font-semibold lg:text-5xl">
+      <div className="px-3 lg:px-10 mt-14 lg:mt-20 max-w-[1160px] mx-auto">
+        <h1 className="text-3xl text-center font-semibold lg:text-5xl">
           Weekend Champion
         </h1>
         <p className="text-center text-[#120059] leading-6 mt-5 max-w-[1100px] mx-auto lg:mt-10">
@@ -41,8 +41,8 @@ const Prizes = () => {
           Unlock Bigger Wins with Every Match!
         </h1>
         <div className="pricingCards mt-14 lg:mt-18">
-          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center dark:text-white">
+          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
               5/5 Match
             </h5>
             <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
@@ -56,8 +56,8 @@ const Prizes = () => {
               AED 20,000
             </h3>
           </div>
-          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center dark:text-white">
+          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
               4/5 Match
             </h5>
             <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
@@ -71,8 +71,8 @@ const Prizes = () => {
               AED 20,000
             </h3>
           </div>
-          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center dark:text-white">
+          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
               3/5 Match
             </h5>
             <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
@@ -86,8 +86,8 @@ const Prizes = () => {
               AED 20,000
             </h3>
           </div>
-          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center dark:text-white">
+          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
               2/5 Match
             </h5>
             <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
@@ -101,8 +101,8 @@ const Prizes = () => {
               AED 20,000
             </h3>
           </div>
-          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center dark:text-white">
+          <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
               1/5 Match
             </h5>
             <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
