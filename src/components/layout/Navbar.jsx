@@ -113,7 +113,7 @@ const Navbar = () => {
                 }`}
               >
                 <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
-                  <p>Buy Now</p>
+                  <Link to='play/buy-now'>Buy Now</Link>
                   <Link to="/play/prizes">Prizes</Link>
                   <Link to="/play/how-to-play">How to play</Link>
                 </div>
@@ -134,9 +134,8 @@ const Navbar = () => {
                 }`}
               >
                 <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
-                  <p>Weekly live streams</p>
-                  <p>Previous draw results</p>
-                  <p>Previous live draws</p>
+                  <Link to='draws/previous-draw-results'>Previous draw results</Link>
+                  <Link to='draws/winners-stories'>Winners' Stories</Link>
                 </div>
               </div>
             </div>

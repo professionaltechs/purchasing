@@ -15,6 +15,9 @@ import BuyNow from "./pages/play/BuyNow";
 import Prizes from "./pages/play/Prizes";
 import HowToPlay from "./pages/play/HowToPlay";
 
+import PreviousDrawResults from "./pages/draws/PreviousDrawResults";
+import WinnersStories from "./pages/draws/WinnersStories";
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,9 +26,13 @@ function App() {
           <Route index element={<Home />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
+
           <Route path="play/prizes" element={<Prizes />} />
           <Route path="play/how-to-play" element={<HowToPlay />} />
           <Route path="play/buy-now" element={<BuyNow />} />
+
+          <Route path="draws/previous-draw-results" element={<PreviousDrawResults />} />
+          <Route path="draws/winners-stories" element={<WinnersStories />} />
         </Route>
       </Routes>
     </BrowserRouter>
