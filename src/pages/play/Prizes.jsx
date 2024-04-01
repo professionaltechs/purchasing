@@ -40,7 +40,7 @@ const Prizes = () => {
         <h1 className="text-3xl text-center mt-12 font-semibold lg:text-4xl lg:mt-16">
           Unlock Bigger Wins with Every Match!
         </h1>
-        <div className="pricingCards mt-14 lg:mt-18">
+        <div className="pricingCards mt-14 lg:mt-18 max-w-[1300px] mx-auto">
           <div class="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
             <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
               5/5 Match
