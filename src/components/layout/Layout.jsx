@@ -11,7 +11,7 @@ const Layout = () => {
     <div className="flex flex-col min-h-screen relative">
       <BackGroundImage />
       <Navbar />
-      <div className="grow flex flex-col pb-32 pt-10 lg:pb-48">
+      <div className="grow flex flex-col pb-32 pt-10 lg:pb-48 relative">
         <Outlet />
       </div>
       <Footer />

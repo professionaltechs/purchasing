@@ -18,6 +18,9 @@ import HowToPlay from "./pages/play/HowToPlay";
 import PreviousDrawResults from "./pages/draws/PreviousDrawResults";
 import WinnersStories from "./pages/draws/WinnersStories";
 
+import LatestNews from "./pages/LatestNews";
+import AboutUs from "./pages/AboutUs";
+
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +36,9 @@ function App() {
 
           <Route path="draws/previous-draw-results" element={<PreviousDrawResults />} />
           <Route path="draws/winners-stories" element={<WinnersStories />} />
+
+          <Route path="latest-news" element={<LatestNews />} />
+          <Route path="about-us" element={<AboutUs />} />
         </Route>
       </Routes>
     </BrowserRouter>

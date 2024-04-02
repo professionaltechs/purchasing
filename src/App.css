@@ -8,25 +8,57 @@ p {
   font-size: 12px;
 }
 
+input {
+  font-size: 12px !important;
+}
+
 .pricingCards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
 }
 
-@media(min-width: 650px) {
-  .pricingCards {
+.latestNewsCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.closseSidebarDropDown {
+  height: 0px !important;
+}
+
+@media (min-width: 650px) {
+  .pricingCards, .latestNewsCards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+@media(min-width: 768px) {
+  .sideBarOpenBg {
+    display: none !important;
+  }
+}
 
 @media (min-width: 1024px) {
   p {
     font-size: 16px;
   }
 
-  .pricingCards {
+  input {
+    font-size: 16px !important;
+  }
+
+  .newsCard {
+    transition: all 400ms;
+  }
+
+  .pricingCards, .latestNewsCards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .newsCard:hover {
+    transition: all 400ms;
+    transform: scale(1.05);
   }
 }
