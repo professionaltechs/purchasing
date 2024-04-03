@@ -21,6 +21,10 @@ import WinnersStories from "./pages/draws/WinnersStories";
 import LatestNews from "./pages/LatestNews";
 import AboutUs from "./pages/AboutUs";
 
+import UserLayout from "./components/user/layout/UserLayout";
+import ProfileDetails from "./components/user/ProfileDetails";
+import ChangePassword from "./components/user/ChangePassword";
+
 function App() {
   return (
     <BrowserRouter>
@@ -39,6 +43,11 @@ function App() {
 
           <Route path="latest-news" element={<LatestNews />} />
           <Route path="about-us" element={<AboutUs />} />
+
+          <Route path="user/" element={<UserLayout />}>
+            <Route path="profile" element={<ProfileDetails/>} />
+            <Route path="change-password" element={<ChangePassword/>} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

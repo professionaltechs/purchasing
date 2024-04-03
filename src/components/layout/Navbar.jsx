@@ -122,10 +122,10 @@ const Navbar = () => {
           onClick={() => setSideBarOpen(!sideBarOpen)}
         />
         <div className="hidden md:flex items-center gap-7 lg:gap-12">
-          <div className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
+          <Link to='/play/buy-now' className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
             <BsCreditCard className="lg:text-xl" />
             <p>Buy Now</p>
-          </div>
+          </Link>
           <Link
             to="/login"
             className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]"
@@ -264,6 +264,9 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            
           </div>
         </div>
       </div>
@@ -463,6 +466,19 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <p>
+              <Link to="/latest-news">Update Profile</Link>
+            </p>
+            <p>
+              <Link to="/latest-news">Change Password</Link>
+            </p>
+            <p>
+              <Link to="/latest-news">Recurring Purchase</Link>
+            </p>
+            <p>
+              <Link to="/latest-news">My Purchase</Link>
+            </p>
+
 
             {/* <div>
               <div
