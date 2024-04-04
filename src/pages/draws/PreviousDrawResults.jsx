@@ -132,7 +132,7 @@ const PreviousDrawResults = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto mt-14 max-w-[1300px] mx-auto">
+      <div className="overflow-x-auto mt-14 max-w-[1300px] mx-auto pb-2">
         <div className="min-w-[500px] grid grid-cols-5 border-2 border-black">
           <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>MATCH</p>
@@ -232,7 +232,7 @@ const PreviousDrawResults = () => {
         TRIPLE 100 RAFFLE
       </h1>
 
-      <div className="overflow-x-auto mt-14 max-w-[1300px] mx-auto">
+      <div className="overflow-x-auto mt-14 max-w-[1300px] mx-auto pb-2">
         <div className="min-w-[500px] grid grid-cols-2 border-2 border-black">
           <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>RAFFLE ID</p>
