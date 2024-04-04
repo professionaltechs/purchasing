@@ -3,8 +3,8 @@ import React from "react";
 const ChangePassword = () => {
   return (
     <div>
-      <div className="my-16 w-11/12 max-w-xl mx-auto rounded-xl shadow-2xl px-5 py-16 bg-[#F5F5F5]">
-        <h1 className="text-3xl text-center font-semibold lg:text-4xl">
+      <div className=" w-11/12 max-w-xl mx-auto  px-5">
+        <h1 className="text-xl text-center font-semibold lg:text-4xl">
           Change Password
         </h1>
         <form className="max-w-xl mx-auto mt-10">

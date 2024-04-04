@@ -40,7 +40,7 @@ const HowToPlay = () => {
           How To Play
         </h1>
 
-        <div className="mt-20 flex flex-col gap-16 lg:mt-28 lg:gap-10">
+        <div className="mt-16 flex flex-col gap-16 lg:mt-28 lg:gap-10">
           <div className="flex items-center justify-between gap-[10px]">
             <img src={one} alt="" className="w-[45%] h-auto" />
             <p className="text-[#120059] font-medium">

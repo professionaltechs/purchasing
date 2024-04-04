@@ -118,11 +118,14 @@ const Navbar = () => {
           LOGO
         </Link>
         <IoIosMenu
-          className="md:hidden"
+          className="lg:hidden"
           onClick={() => setSideBarOpen(!sideBarOpen)}
         />
-        <div className="hidden md:flex items-center gap-7 lg:gap-12">
-          <Link to='/play/buy-now' className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]">
+        <div className="hidden lg:flex items-center gap-7 lg:gap-12">
+          <Link
+            to="/play/buy-now"
+            className="flex items-center gap-2 cursor-pointer hover:text-[#fed700]"
+          >
             <BsCreditCard className="lg:text-xl" />
             <p>Buy Now</p>
           </Link>
@@ -146,7 +149,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block navbarDropDowns sticky py-3 z-40 bg-[#F5F5F5]">
+      <div className="hidden lg:block navbarDropDowns sticky py-3 z-40 bg-[#F5F5F5]">
         <div className="flex w-11/12 max-w-6xl justify-between mx-auto font-medium">
           <div className="flex items-center gap-7 lg:gap-10">
             <div
@@ -163,15 +166,21 @@ const Navbar = () => {
                   activeDropDown == 1 ? "block" : "hidden"
                 }`}
               >
-                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
+                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
                   <p>
-                    <Link to="play/buy-now">Buy Now</Link>
+                    <Link className="block" to="play/buy-now">
+                      Buy Now
+                    </Link>
                   </p>
                   <p>
-                    <Link to="/play/prizes">Prizes</Link>
+                    <Link className="block" to="/play/prizes">
+                      Prizes
+                    </Link>
                   </p>
                   <p>
-                    <Link to="/play/how-to-play">How to play</Link>
+                    <Link className="block" to="/play/how-to-play">
+                      How to play
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -190,14 +199,16 @@ const Navbar = () => {
                   activeDropDown == 2 ? "block" : "hidden"
                 }`}
               >
-                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
+                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
                   <p>
-                    <Link to="draws/previous-draw-results">
+                    <Link className="block" to="draws/previous-draw-results">
                       Previous draw results
                     </Link>
                   </p>
                   <p>
-                    <Link to="draws/winners-stories">Winners' Stories</Link>
+                    <Link className="block" to="draws/winners-stories">
+                      Winners' Stories
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -216,9 +227,9 @@ const Navbar = () => {
                   activeDropDown == 3 ? "block" : "hidden"
                 }`}
               >
-                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
-                  <p>Facebook</p>
-                  <p>Instagram</p>
+                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
+                  <Link className="block">Facebook</Link>
+                  <Link className="block">Instagram</Link>
                 </div>
               </div>
             </div>
@@ -243,6 +254,16 @@ const Navbar = () => {
             >
               <p>AED</p>
               <FaAngleDown />
+              <div
+                className={`absolute top-full left-0 py-4 ${
+                  activeDropDown == 4 ? "block" : "hidden"
+                }`}
+              >
+                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
+                  <Link className="block">Abc</Link>
+                  <Link className="block">Xyz</Link>
+                </div>
+              </div>
             </div>
             <div
               className={`dropDowns flex items-center gap-2 relative ${
@@ -258,31 +279,29 @@ const Navbar = () => {
                   activeDropDown == 5 ? "block" : "hidden"
                 }`}
               >
-                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC]">
-                  <p>English</p>
-                  <p>Arabic</p>
+                <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
+                  <Link className="block">English</Link>
+                  <Link className="block">Arabic</Link>
                 </div>
               </div>
             </div>
           </div>
-          <div>
-            
-          </div>
+          <div></div>
         </div>
       </div>
 
       {/* MOBILE SIDEBAR */}
       <div
-        className="sideBarOpenBg md:hidden fixed left-0 z-10 w-[100vw] bg-transparent"
+        className="sideBarOpenBg lg:hidden fixed left-0 z-20 w-[100vw] bg-transparent"
         style={{ transition: "all 500ms" }}
         onClick={() => setSideBarOpen(false)}
       ></div>
       <div
-        className={`mobileSidebar md:hidden fixed w-[300px] bg-[#F5F5DC] z-50 overflow-auto`}
+        className={`mobileSidebar lg:hidden fixed w-[300px] bg-[#F5F5DC] z-50 overflow-auto`}
         style={{ transition: "all 400ms" }}
       >
         <div className="pt-14 pb-8 px-12 flex flex-col justify-between min-h-full h-max gap-14 z-50">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 text-[#120059]">
             <div>
               <div
                 className="flex items-end justify-between"
@@ -310,13 +329,34 @@ const Navbar = () => {
               >
                 <div className="pt-3 flex flex-col gap-2 px-3">
                   <p>
-                    <Link to="/play/buy-now">Buy Now</Link>
+                    <Link
+                      onClick={() => {
+                        setSideBarOpen(false);
+                      }}
+                      to="/play/buy-now"
+                    >
+                      Buy Now
+                    </Link>
                   </p>
                   <p>
-                    <Link to="/play/prizes">Prizes</Link>
+                    <Link
+                      onClick={() => {
+                        setSideBarOpen(false);
+                      }}
+                      to="/play/prizes"
+                    >
+                      Prizes
+                    </Link>
                   </p>
                   <p>
-                    <Link to="/play/how-to-play">How To Play</Link>
+                    <Link
+                      onClick={() => {
+                        setSideBarOpen(false);
+                      }}
+                      to="/play/how-to-play"
+                    >
+                      How To Play
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -348,12 +388,24 @@ const Navbar = () => {
               >
                 <div className="pt-3 flex flex-col gap-2 px-3">
                   <p>
-                    <Link to="/draws/previous-draw-results">
+                    <Link
+                      onClick={() => {
+                        setSideBarOpen(false);
+                      }}
+                      to="/draws/previous-draw-results"
+                    >
                       Previous draw results
                     </Link>
                   </p>
                   <p>
-                    <Link to="/draws/winners-stories">Winners' Stories</Link>
+                    <Link
+                      onClick={() => {
+                        setSideBarOpen(false);
+                      }}
+                      to="/draws/winners-stories"
+                    >
+                      Winners' Stories
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -394,10 +446,24 @@ const Navbar = () => {
               </div>
             </div>
             <p>
-              <Link to="/latest-news">Latest News</Link>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/latest-news"
+              >
+                Latest News
+              </Link>
             </p>
             <p>
-              <Link to="/about-us">About Us</Link>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/about-us"
+              >
+                About Us
+              </Link>
             </p>
             <div>
               <div
@@ -467,115 +533,55 @@ const Navbar = () => {
               </div>
             </div>
             <p>
-              <Link to="/latest-news">Update Profile</Link>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/user/profile"
+              >
+                Update Profile
+              </Link>
             </p>
             <p>
-              <Link to="/latest-news">Change Password</Link>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/user/change-password"
+              >
+                Change Password
+              </Link>
             </p>
             <p>
-              <Link to="/latest-news">Recurring Purchase</Link>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/user/recurring-purchase"
+              >
+                Recurring Purchase
+              </Link>
             </p>
             <p>
-              <Link to="/latest-news">My Purchase</Link>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/user/messages"
+              >
+                Messages
+              </Link>
             </p>
-
-
-            {/* <div>
-              <div
-                className="flex items-end justify-between"
-                onClick={() =>
-                  sidebarDropDownOpen == 5
-                    ? setSideBarDropDownOpen(0)
-                    : setSideBarDropDownOpen(5)
-                }
+            <p>
+              <Link
+                onClick={() => {
+                  setSideBarOpen(false);
+                }}
+                to="/user/my-purchase"
               >
-                <p>English</p>
-                <FaAngleDown
-                  className={`text-[12px] ${
-                    sidebarDropDownOpen == 5 ? `rotate-180` : `rotate-0`
-                  }`}
-                  style={{ transition: "all 400ms" }}
-                />
-              </div>
-              <div
-                className={`${
-                  sidebarDropDownOpen == 5
-                    ? "sideBarActiveDropDown"
-                    : "closseSidebarDropDown"
-                } h-0 overflow-hidden`}
-                style={{ transition: "all 400ms" }}
-              >
-                <div className="pt-3 flex flex-col gap-2 px-3">
-                  <p>
-                    <Link>Xyz</Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
-                className="flex items-end justify-between"
-                onClick={() =>
-                  sidebarDropDownOpen == 5
-                    ? setSideBarDropDownOpen(0)
-                    : setSideBarDropDownOpen(5)
-                }
-              >
-                <p>English</p>
-                <FaAngleDown
-                  className={`text-[12px] ${
-                    sidebarDropDownOpen == 5 ? `rotate-180` : `rotate-0`
-                  }`}
-                  style={{ transition: "all 400ms" }}
-                />
-              </div>
-              <div
-                className={`${
-                  sidebarDropDownOpen == 5
-                    ? "sideBarActiveDropDown"
-                    : "closseSidebarDropDown"
-                } h-0 overflow-hidden`}
-                style={{ transition: "all 400ms" }}
-              >
-                <div className="pt-3 flex flex-col gap-2 px-3">
-                  <p>
-                    <Link>Xyz</Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div
-                className="flex items-end justify-between"
-                onClick={() =>
-                  sidebarDropDownOpen == 5
-                    ? setSideBarDropDownOpen(0)
-                    : setSideBarDropDownOpen(5)
-                }
-              >
-                <p>English</p>
-                <FaAngleDown
-                  className={`text-[12px] ${
-                    sidebarDropDownOpen == 5 ? `rotate-180` : `rotate-0`
-                  }`}
-                  style={{ transition: "all 400ms" }}
-                />
-              </div>
-              <div
-                className={`${
-                  sidebarDropDownOpen == 5
-                    ? "sideBarActiveDropDown"
-                    : "closseSidebarDropDown"
-                } h-0 overflow-hidden`}
-                style={{ transition: "all 400ms" }}
-              >
-                <div className="pt-3 flex flex-col gap-2 px-3">
-                  <p>
-                    <Link>Xyz</Link>
-                  </p>
-                </div>
-              </div>
-            </div> */}
+                My Purchase
+              </Link>
+            </p>
           </div>
 
           <div>
@@ -585,10 +591,24 @@ const Navbar = () => {
                 <Link>Cart</Link>
               </p>
               <p>
-                <Link>Login</Link>
+                <Link
+                  onClick={() => {
+                    setSideBarOpen(false);
+                  }}
+                  to="/login"
+                >
+                  Login
+                </Link>
               </p>
               <p>
-                <Link>Register</Link>
+                <Link
+                  onClick={() => {
+                    setSideBarOpen(false);
+                  }}
+                  to="/register"
+                >
+                  Register
+                </Link>
               </p>
             </div>
           </div>

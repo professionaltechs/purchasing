@@ -10,21 +10,19 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#120059] pt-14 pb-4 lg:pt-12">
-      <div className="flex flex-col gap-7 md:flex-row max-w-5xl mx-auto">
+    <div className="bg-[#120059] pt-10 pb-4 lg:pt-12">
+      <div className="flex flex-col gap-5 lg:gap-7 md:flex-row max-w-5xl mx-auto">
         <div className="flex justify-evenly max-w-sm m-auto px-4 w-11/12 lg:max-w-xl">
-          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-2xl lg:text-3xl">
-          <FaInstagram />
+          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-xl lg:text-3xl">
+            <FaInstagram />
           </div>
-          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-2xl lg:text-3xl">
-            
+          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-xl lg:text-3xl">
             <FaFacebookF />
           </div>
-          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-2xl lg:text-3xl">
+          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-xl lg:text-3xl">
             <FaXTwitter />
-
           </div>
-          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-2xl lg:text-3xl">
+          <div className="flex items-center justify-center min-w-12 min-h-12 lg:min-w-14 lg:min-h-14 text-[#FFFFFF] hover:text-[#fed700] rounded-full cursor-pointer text-xl lg:text-3xl">
             <FaYoutube />
           </div>
         </div>

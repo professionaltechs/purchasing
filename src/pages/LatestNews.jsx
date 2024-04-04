@@ -3,6 +3,7 @@ import { DatePicker, Space } from "antd";
 
 // IMAGE
 import blogCardImg from "../assets/blogCardImg.jpg";
+import { Link } from "react-router-dom";
 
 const LatestNews = () => {
   const { RangePicker } = DatePicker;
@@ -12,7 +13,7 @@ const LatestNews = () => {
       <h1 className="text-center text-3xl font-semibold lg:text-5xl">
         Latest News
       </h1>
-      <p className="text-[#120059] text-center mx-auto max-w-[900px] mt-16">
+      <p className="text-[#120059] text-center mx-auto max-w-[900px] mt-10 lg:mt-16">
         Stay updated with the latest news and developments in our dynamic world.
         From groundbreaking discoveries to current events shaping society, delve
         into insightful articles, updates, and analyses that keep you informed
@@ -24,8 +25,11 @@ const LatestNews = () => {
           <RangePicker />
         </Space>
       </div>
-      <div className="latestNewsCards max-w-[1200px] mx-auto mt-12">
-        <div className="newsCard max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+      <div className="latestNewsCards max-w-[1200px] mx-auto mt-12 w-fit">
+        <Link
+          to="/blog/123"
+          className="newsCard max-w-[320px] lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow "
+        >
           <a href="#">
             <img className="rounded-t-lg" src={blogCardImg} />
           </a>
@@ -61,8 +65,11 @@ const LatestNews = () => {
               </svg>
             </a>
           </div>
-        </div>
-        <div className="newsCard max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+        </Link>
+        <Link
+          to="/blog/123"
+          className="newsCard max-w-[320px] lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow "
+        >
           <a href="#">
             <img className="rounded-t-lg" src={blogCardImg} />
           </a>
@@ -98,8 +105,11 @@ const LatestNews = () => {
               </svg>
             </a>
           </div>
-        </div>
-        <div className="newsCard max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+        </Link>
+        <Link
+          to="/blog/123"
+          className="newsCard max-w-[320px] lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow "
+        >
           <a href="#">
             <img className="rounded-t-lg" src={blogCardImg} />
           </a>
@@ -135,8 +145,11 @@ const LatestNews = () => {
               </svg>
             </a>
           </div>
-        </div>
-        <div className="newsCard max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+        </Link>
+        <Link
+          to="/blog/123"
+          className="newsCard max-w-[320px] lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow "
+        >
           <a href="#">
             <img className="rounded-t-lg" src={blogCardImg} />
           </a>
@@ -172,8 +185,11 @@ const LatestNews = () => {
               </svg>
             </a>
           </div>
-        </div>
-        <div className="newsCard max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+        </Link>
+        <Link
+          to="/blog/123"
+          className="newsCard max-w-[320px] lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow "
+        >
           <a href="#">
             <img className="rounded-t-lg" src={blogCardImg} />
           </a>
@@ -209,7 +225,7 @@ const LatestNews = () => {
               </svg>
             </a>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

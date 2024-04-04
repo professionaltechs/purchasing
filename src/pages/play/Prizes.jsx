@@ -41,78 +41,78 @@ const Prizes = () => {
           Unlock Bigger Wins with Every Match!
         </h1>
         <div className="pricingCards mt-14 lg:mt-18 max-w-[1300px] mx-auto">
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-8 lg:py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               5/5 Match
             </h5>
-            <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
+            <div className="text-xl lg:text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircleCheck />
             </div>
-            <h3 className="text-center mt-4 font-extrabold tracking-wider text-3xl text-[#130059]">
+            <h3 className="text-center mt-4 font-extrabold tracking-wider text-2xl lg:text-3xl text-[#130059]">
               AED 20,000
             </h3>
           </div>
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-8 lg:py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               4/5 Match
             </h5>
-            <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
+            <div className="text-xl lg:text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircle />
             </div>
-            <h3 className="text-center mt-4 font-extrabold tracking-wider text-3xl text-[#130059]">
+            <h3 className="text-center mt-4 font-extrabold tracking-wider text-2xl lg:text-3xl text-[#130059]">
               AED 20,000
             </h3>
           </div>
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-8 lg:py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               3/5 Match
             </h5>
-            <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
+            <div className="text-xl lg:text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircle />
               <FaRegCircle />
             </div>
-            <h3 className="text-center mt-4 font-extrabold tracking-wider text-3xl text-[#130059]">
+            <h3 className="text-center mt-4 font-extrabold tracking-wider text-2xl lg:text-3xl text-[#130059]">
               AED 20,000
             </h3>
           </div>
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-8 lg:py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               2/5 Match
             </h5>
-            <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
+            <div className="text-xl lg:text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
               <FaRegCircleCheck />
               <FaRegCircleCheck />
               <FaRegCircle />
               <FaRegCircle />
               <FaRegCircle />
             </div>
-            <h3 className="text-center mt-4 font-extrabold tracking-wider text-3xl text-[#130059]">
+            <h3 className="text-center mt-4 font-extrabold tracking-wider text-2xl lg:text-3xl text-[#130059]">
               AED 20,000
             </h3>
           </div>
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-8 lg:py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               1/5 Match
             </h5>
-            <div className="text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
+            <div className="text-xl lg:text-2xl flex gap-3 justify-between w-48 mx-auto text-[#120059]">
               <FaRegCircleCheck />
               <FaRegCircle />
               <FaRegCircle />
               <FaRegCircle />
               <FaRegCircle />
             </div>
-            <h3 className="text-center mt-4 font-extrabold tracking-wider text-3xl text-[#130059]">
+            <h3 className="text-center mt-4 font-extrabold tracking-wider text-2xl lg:text-3xl text-[#130059]">
               AED 20,000
             </h3>
           </div>

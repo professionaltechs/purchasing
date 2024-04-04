@@ -12,28 +12,28 @@ const PreviousDrawResults = () => {
           Past Draws
         </h1>
         <div className="pricingCards mt-14 lg:mt-18 max-w-[1300px] mx-auto">
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               02 / 04 / 2021
             </h5>
             <hr />
-            <h3 className="text-xl  text-center mt-6 font-medium">
+            <h3 className="text-lg lg:text-xl  text-center mt-4 lg:mt-6 font-medium">
               Winning Number
             </h3>
             <div className="text-2xl flex gap-3 justify-between  mx-auto text-[#120059] mt-4">
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>23</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>03</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>21</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>53</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>42</p>
               </div>
             </div>
@@ -41,28 +41,28 @@ const PreviousDrawResults = () => {
               Winning raffle: <span className="font-bold">755278T5</span>
             </p>
           </div>
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               02 / 04 / 2021
             </h5>
             <hr />
-            <h3 className="text-xl  text-center mt-6 font-medium">
+            <h3 className="text-lg lg:text-xl  text-center mt-4 lg:mt-6 font-medium">
               Winning Number
             </h3>
             <div className="text-2xl flex gap-3 justify-between  mx-auto text-[#120059] mt-4">
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>23</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>03</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>21</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>53</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>42</p>
               </div>
             </div>
@@ -70,28 +70,28 @@ const PreviousDrawResults = () => {
               Winning raffle: <span className="font-bold">755278T5</span>
             </p>
           </div>
-          <div className="w-[100%] max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
-            <h5 className="mb-2 text-2xl font-semibold tracking-tight text-[#212121] text-center">
+          <div className="w-[100%] max-w-[320px] lg:max-w-sm mx-auto py-10 px-6 bg-white border border-gray-200 rounded-lg shadow hover:scale-[1.05] hover:shadow-xl transition-all duration-300">
+            <h5 className="mb-2 text-xl lg:text-2xl font-semibold tracking-tight text-[#212121] text-center">
               02 / 04 / 2021
             </h5>
             <hr />
-            <h3 className="text-xl  text-center mt-6 font-medium">
+            <h3 className="text-lg lg:text-xl  text-center mt-4 lg:mt-6 font-medium">
               Winning Number
             </h3>
             <div className="text-2xl flex gap-3 justify-between  mx-auto text-[#120059] mt-4">
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>23</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>03</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>21</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>53</p>
               </div>
-              <div className="w-[40px] h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+              <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
                 <p>42</p>
               </div>
             </div>
@@ -114,39 +114,39 @@ const PreviousDrawResults = () => {
       <h1 className="text-2xl lg:text-4xl text-center font-semibold mt-14">
         Grand Draw
       </h1>
-      <div className="text-2xl flex gap-3 justify-between  mx-auto text-[#120059] max-w-[400px]  mt-10">
-        <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+      <div className="text-2xl flex gap-3 justify-between  mx-auto text-[#120059] max-w-[300px] lg:max-w-[400px] mt-7 lg:mt-10">
+        <div className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
           <p>23</p>
         </div>
-        <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+        <div className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
           <p>03</p>
         </div>
-        <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+        <div className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
           <p>21</p>
         </div>
-        <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+        <div className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
           <p>53</p>
         </div>
-        <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
+        <div className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] bg-[#fed500] flex items-center justify-center rounded-[50%] font-medium text-black">
           <p>42</p>
         </div>
       </div>
 
       <div className="overflow-x-auto mt-14 max-w-[1300px] mx-auto">
         <div className="min-w-[500px] grid grid-cols-5 border-2 border-black">
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>MATCH</p>
           </div>
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>NUMBER OF WINNERS</p>
           </div>
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>PRIZE POOL</p>
           </div>
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>PRIZE TYPE</p>
           </div>
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>WINNINGS</p>
           </div>
 
@@ -234,10 +234,10 @@ const PreviousDrawResults = () => {
 
       <div className="overflow-x-auto mt-14 max-w-[1300px] mx-auto">
         <div className="min-w-[500px] grid grid-cols-2 border-2 border-black">
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>RAFFLE ID</p>
           </div>
-          <div className="px-4 py-3 font-bold border border-black text-[#120059]">
+          <div className="px-4 py-3 font-bold border border-black text-[#000]">
             <p>AMOUNT </p>
           </div>
           <div className="px-4 py-3 border border-black text-[#120059]">

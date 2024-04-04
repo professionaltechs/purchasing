@@ -26,6 +26,7 @@ const UserSideBar = () => {
 
   useEffect(() => {
     const hidingElements = document.getElementsByClassName("hidingElement");
+    const sideBar = document.getElementsByClassName("adminDashboardMain");
     if (hidingElements.length) {
       let maxWidth = hidingElements[0].offsetWidth;
       for (let index = 0; index < hidingElements.length; index++) {
@@ -41,7 +42,7 @@ const UserSideBar = () => {
     }
   }, [windowsWidth]);
 
-  if (windowsWidth >= 768) {
+  if (windowsWidth >= 1024) {
     const handleNavbarOpen = () => {
       const hidingElements = document.getElementsByClassName("hidingElement");
       if (hidingElements[0].style.width == "0px") {
@@ -58,7 +59,7 @@ const UserSideBar = () => {
 
     return (
       <>
-        <div className="adminDashboardMain hidden md:block rounded-lg h-[700px]">
+        <div className="adminDashboardMain hidden lg:block rounded-lg h-[700px]">
           <div className="adminDashboardSidebar">
             <div className="adminDashboardSidebarHeader text-[#ADD8E6]">
               <div className="hidingElement">
@@ -81,7 +82,10 @@ const UserSideBar = () => {
                   <GrDocumentUpdate className="icon" />
                 </span>
               </Link>
-              <Link to='/user/change-password' className="adminDashboardSidebarElem">
+              <Link
+                to="/user/change-password"
+                className="adminDashboardSidebarElem"
+              >
                 <div className="hidingElement">
                   <h5 className="text-[14px]">Change Password</h5>
                 </div>
@@ -89,7 +93,7 @@ const UserSideBar = () => {
                   <RiLockPasswordLine className="icon" />
                 </span>
               </Link>
-              <Link className="adminDashboardSidebarElem">
+              <Link to='/user/recurring-purchase' className="adminDashboardSidebarElem">
                 <div className="hidingElement">
                   <h5 className="text-[14px]">Recurring Purchase</h5>
                 </div>
@@ -97,22 +101,22 @@ const UserSideBar = () => {
                   <LuRepeat className="icon" />
                 </span>
               </Link>
-              <div className="adminDashboardSidebarElem">
+              <Link to='/user/messages' className="adminDashboardSidebarElem">
                 <div className="hidingElement">
                   <h5 className="text-[14px]">Meassages</h5>
                 </div>
                 <span className="px-3 shrink-0">
                   <BiMessageRounded className="icon" />
                 </span>
-              </div>
-              <div className="adminDashboardSidebarElem">
+              </Link>
+              <Link to='/user/my-purchase' className="adminDashboardSidebarElem">
                 <div className="hidingElement">
                   <h5 className="text-[14px]">My Purchase</h5>
                 </div>
                 <span className="px-3 shrink-0">
                   <BiPurchaseTag className="icon" />
                 </span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

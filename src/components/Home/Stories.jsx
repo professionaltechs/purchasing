@@ -2,7 +2,7 @@ import React from "react";
 
 const Stories = () => {
   return (
-    <div className="mt-24 flex flex-col-reverse gap-16 px-3 lg:px-10 lg:flex-row lg:items-center lg:max-w-[1420px] lg:mx-auto lg:gap-10">
+    <div className="mt-24 flex flex-col gap-16 px-3 lg:px-10 lg:flex-row lg:items-center lg:max-w-[1420px] lg:mx-auto lg:gap-10">
       <iframe
         src="https://www.youtube.com/embed/E7wJTI-1dvQ"
         // frameBorder="0"

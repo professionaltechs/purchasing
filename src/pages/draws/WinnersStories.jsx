@@ -6,7 +6,7 @@ const WinnersStories = () => {
       <h1 className="text-center text-3xl font-semibold lg:text-5xl">
         Winner Stories
       </h1>
-      <p className="text-[#120059] text-center mx-auto max-w-[900px] mt-16">
+      <p className="text-[#120059] text-center mx-auto max-w-[900px] mt-10 lg:mt-16">
         Discover the voices that inspire us every day. Dive into the authentic
         stories of our valued customers as they share their experiences,
         journeys, and triumphs. From heartfelt moments to remarkable
@@ -16,15 +16,15 @@ const WinnersStories = () => {
         journey. Explore our customer stories and witness the power of real-life
         experiences.
       </p>
-      <div className="max-w-[1300px] mx-auto mt-28 flex flex-col gap-20 lg:gap-28">
-        <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
+      <div className="max-w-[1300px] mx-auto mt-20 lg:mt-28 flex flex-col gap-20 lg:gap-28">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-16 items-center">
           <iframe
             src="https://www.youtube.com/embed/E7wJTI-1dvQ"
             // frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen="allowfullscreen"
             title="video"
-            className="w-11/12 shrink-0 h-80 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
+            className="w-11/12 shrink-0 h-48 lg:h-72 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
           />
           <div className="text-center md:text-left">
             <h1 className="text-xl lg:text-2xl font-semibold text-[#120050]">
@@ -42,14 +42,14 @@ const WinnersStories = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row-reverse gap-12 md:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-16 items-center">
           <iframe
             src="https://www.youtube.com/embed/E7wJTI-1dvQ"
             // frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen="allowfullscreen"
             title="video"
-            className="w-11/12 shrink-0 h-80 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
+            className="w-11/12 shrink-0 h-48 lg:h-72 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
           />
           <div className="text-center md:text-left">
             <h1 className="text-xl lg:text-2xl font-semibold text-[#120050]">
@@ -64,14 +64,14 @@ const WinnersStories = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-16 items-center">
           <iframe
             src="https://www.youtube.com/embed/E7wJTI-1dvQ"
             // frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen="allowfullscreen"
             title="video"
-            className="w-11/12 shrink-0 h-80 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
+            className="w-11/12 shrink-0 h-48 lg:h-72 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
           />
           <div className="text-center md:text-left">
             <h1 className="text-xl lg:text-2xl font-semibold text-[#120050]">
@@ -89,14 +89,14 @@ const WinnersStories = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row-reverse gap-12 md:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row-reverse gap-8 md:gap-16 items-center">
           <iframe
             src="https://www.youtube.com/embed/E7wJTI-1dvQ"
             // frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen="allowfullscreen"
             title="video"
-            className="w-11/12 shrink-0 h-80 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
+            className="w-11/12 shrink-0 h-48 lg:h-72 max-w-lg rounded-3xl shadow-2xl lg:min-w-[300px] lg:ml-0"
           />
           <div className="text-center md:text-left">
             <h1 className="text-xl lg:text-2xl font-semibold text-[#120050]">
