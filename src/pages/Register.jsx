@@ -132,21 +132,6 @@ const Register = () => {
                 </label>
               </div>
               <div className="relative z-0 w-full mb-5 group">
-                <Select
-                  id="gender"
-                  placeholder="Gender"
-                  className="w-full h-full bg-transparent"
-                  onChange={handleChange}
-                  options={[
-                    { value: "Male", label: "Male" },
-                    { value: "Female", label: "Female" },
-                  ]}
-                />
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 md:gap-6">
-              <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="number"
                   name="postalCode"
@@ -161,18 +146,6 @@ const Register = () => {
                 >
                   Postal Code
                 </label>
-              </div>
-              <div className="relative z-0 w-full mb-5 group">
-                <Select
-                  id="country"
-                  placeholder="Country"
-                  className="w-full h-full bg-transparent"
-                  onChange={handleChange}
-                  options={[
-                    { value: "Abc", label: "Abc" },
-                    { value: "Def", label: "Def" },
-                  ]}
-                />
               </div>
             </div>
 
