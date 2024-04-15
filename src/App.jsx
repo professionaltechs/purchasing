@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 // STYLING
 import "./App.css";
@@ -8,8 +9,10 @@ import Layout from "./components/layout/Layout";
 
 // PAGES
 import Home from "./pages/Home";
+
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import EmailValidation from "./pages/EmailValidation";
 
 import BuyNow from "./pages/play/BuyNow";
 import Prizes from "./pages/play/Prizes";
@@ -32,38 +35,46 @@ import MyPurchase from "./pages/user/MyPurchase";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
 
-          <Route path="play/prizes" element={<Prizes />} />
-          <Route path="play/how-to-play" element={<HowToPlay />} />
-          <Route path="play/buy-now" element={<BuyNow />} />
+            <Route path="register" element={<Register />} />
+            <Route path="login" element={<Login />} />
+            <Route path="email-validation" element={<EmailValidation />} />
 
-          <Route
-            path="draws/previous-draw-results"
-            element={<PreviousDrawResults />}
-          />
-          <Route path="draws/winners-stories" element={<WinnersStories />} />
+            <Route path="play/prizes" element={<Prizes />} />
+            <Route path="play/how-to-play" element={<HowToPlay />} />
+            <Route path="play/buy-now" element={<BuyNow />} />
 
-          <Route path="latest-news" element={<LatestNews />} />
-          <Route path="blog/:id" element={<Blog />} />
-          <Route path="about-us" element={<AboutUs />} />
+            <Route
+              path="draws/previous-draw-results"
+              element={<PreviousDrawResults />}
+            />
+            <Route path="draws/winners-stories" element={<WinnersStories />} />
 
-          <Route path="user/" element={<UserLayout />}>
-            <Route path="profile" element={<ProfileDetails />} />
-            <Route path="change-password" element={<ChangePassword />} />
-            <Route path="recurring-purchase" element={<RecurringPurchase />} />
-            <Route path="messages" element={<Messages />} />
-            <Route path="messages/:id" element={<MessageData />} />
-            <Route path="my-purchase" element={<MyPurchase />} />
+            <Route path="latest-news" element={<LatestNews />} />
+            <Route path="blog/:id" element={<Blog />} />
+            <Route path="about-us" element={<AboutUs />} />
+
+            <Route path="user/" element={<UserLayout />}>
+              <Route path="profile" element={<ProfileDetails />} />
+              <Route path="change-password" element={<ChangePassword />} />
+              <Route
+                path="recurring-purchase"
+                element={<RecurringPurchase />}
+              />
+              <Route path="messages" element={<Messages />} />
+              <Route path="messages/:id" element={<MessageData />} />
+              <Route path="my-purchase" element={<MyPurchase />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+      <Toaster />
+    </>
   );
 }
 

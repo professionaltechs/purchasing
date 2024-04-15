@@ -1,9 +1,58 @@
-import React from "react";
-import { Select } from "antd";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
+// AXIOS
+import { auth } from "../components/axios";
 
 const Register = () => {
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
+  const navigate = useNavigate();
+
+  const [userDetils, setUserDeails] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+    firstName: "",
+    lastName: "",
+    address: "",
+    phoneNumber: "",
+    postalCode: "",
+  });
+
+  const handleInputChange = (e) => {
+    setUserDeails((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    for (var inputField in userDetils) {
+      if (userDetils[inputField].length === 0) {
+        toast.error(`Please fill all the input field.`);
+        return;
+      }
+    }
+    try {
+      const response = await auth.post("/auth/register-user", userDetils);
+      if (response.data.success) {
+        toast.success(response.data.message);
+        setTimeout(() => {
+          navigate("/email-validation");
+        }, 1000);
+      } else {
+        toast.error("Error registering user. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error registering user:", error);
+      toast.error(
+        error.response.data.message ||
+          "Error registering user. Please try again."
+      );
+    }
   };
 
   return (
@@ -18,15 +67,17 @@ const Register = () => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="email"
-                name="floating_email"
-                id="floating_email"
+                name="email"
+                id="email"
                 className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
+                value={userDetils.email}
+                onChange={handleInputChange}
                 required
               />
               <label
-                htmlFor="floating_email"
-                className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                htmlFor="email"
+                className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Email address
               </label>
@@ -34,15 +85,17 @@ const Register = () => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="password"
-                name="floating_password"
-                id="floating_password"
+                name="password"
+                id="password"
                 className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
+                value={userDetils.password}
+                onChange={handleInputChange}
               />
               <label
-                htmlFor="floating_password"
-                className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                htmlFor="password"
+                className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Password
               </label>
@@ -50,15 +103,17 @@ const Register = () => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="password"
-                name="repeat_password"
-                id="floating_repeat_password"
+                name="confirmPassword"
+                id="confirmPassword"
                 className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
+                value={userDetils.confirmPassword}
+                onChange={handleInputChange}
               />
               <label
-                htmlFor="floating_repeat_password"
-                className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                htmlFor="confirmPassword"
+                className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Confirm password
               </label>
@@ -67,15 +122,17 @@ const Register = () => {
               <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
-                  name="floating_first_name"
-                  id="floating_first_name"
+                  name="firstName"
+                  id="firstName"
                   className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
+                  value={userDetils.firstName}
+                  onChange={handleInputChange}
                 />
                 <label
-                  htmlFor="floating_first_name"
-                  className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="firstName"
+                  className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   First name
                 </label>
@@ -83,15 +140,17 @@ const Register = () => {
               <div className="relative z-0 w-full mb-5 group">
                 <input
                   type="text"
-                  name="floating_last_name"
-                  id="floating_last_name"
+                  name="lastName"
+                  id="lastName"
                   className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
+                  value={userDetils.lastName}
+                  onChange={handleInputChange}
                 />
                 <label
-                  htmlFor="floating_last_name"
-                  className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="lastName"
+                  className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Last name
                 </label>
@@ -99,16 +158,17 @@ const Register = () => {
             </div>
             <div className="relative z-0 w-full mb-5 group">
               <input
-                type="email"
+                type="text"
                 name="address"
-                id="floating_email"
                 className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 required
+                value={userDetils.address}
+                onChange={handleInputChange}
               />
               <label
                 htmlFor="address"
-                className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Address
               </label>
@@ -116,17 +176,19 @@ const Register = () => {
             <div className="grid md:grid-cols-2 md:gap-6">
               <div className="relative z-0 w-full mb-5 group">
                 <input
-                  type="tel"
+                  type="number"
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  name="floating_phone"
-                  id="floating_phone"
+                  name="phoneNumber"
+                  id="phoneNumber"
                   className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
+                  value={userDetils.phoneNumber}
+                  onChange={handleInputChange}
                 />
                 <label
-                  htmlFor="floating_phone"
-                  className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="phoneNumber"
+                  className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Phone number (0300-0000000)
                 </label>
@@ -135,14 +197,15 @@ const Register = () => {
                 <input
                   type="number"
                   name="postalCode"
-                  id="floating_phone"
                   className="block py-2.5 px-0 w-full text-sm lg:text-lg lg:font-medium text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
+                  value={userDetils.postalCode}
+                  onChange={handleInputChange}
                 />
                 <label
                   htmlFor="postalCode"
-                  className="peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="z-10 peer-focus:font-semibold absolute text-xs lg:text-sm text-[#171717] font-medium dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Postal Code
                 </label>
@@ -152,6 +215,7 @@ const Register = () => {
             <button
               type="submit"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              onClick={(e) => handleRegister(e)}
             >
               Submit
             </button>

@@ -11,8 +11,10 @@ const Stories = () => {
         title="video"
         className="w-11/12 shrink-0 h-56 sm:h-80 mx-auto max-w-lg rounded-3xl shadow-2xl lg:min-w-[440px] lg:ml-0"
       />
-      <div className="max-w-2xl text-center lg:text-left">
-        <h1 className="text-3xl lg:text-5xl font-semibold">Customer Experiences.</h1>
+      <div className="max-w-2xl text-center lg:text-left mx-auto">
+        <h1 className="text-3xl lg:text-5xl font-semibold">
+          Customer Experiences.
+        </h1>
         <p className="text-[#120059] mt-8 lg:leading-6">
           Discover the voices that inspire us every day. Dive into the authentic
           stories of our valued customers as they share their experiences,
