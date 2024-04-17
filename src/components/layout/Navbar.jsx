@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 // ICONS
@@ -15,7 +15,7 @@ const Navbar = () => {
   var lastScrollTop = 0;
   let stikyValue;
 
-  const scrollAnimation = () => {
+  const scrollAnimation = useCallback(() => {
     const animatingElement =
       document.getElementsByClassName("navbarDropDowns")[0];
     const maxValue =
@@ -36,15 +36,15 @@ const Navbar = () => {
       animatingElement.style.top = stikyValue + "px";
     }
     lastScrollTop = st <= 0 ? 0 : st;
-  };
+  }, []);
 
-  const handleNavbarPosition = () => {
+  const handleNavbarPosition = useCallback(() => {
     const requiredStickyValue =
       document.getElementsByClassName("navbarTop")[0].clientHeight;
     stikyValue = requiredStickyValue;
     document.getElementsByClassName("navbarDropDowns")[0].style.top =
       requiredStickyValue + "px";
-  };
+  }, []);
 
   useEffect(() => {
     const requiredStickyValue =
@@ -97,13 +97,13 @@ const Navbar = () => {
     sideBar.style.left = "-100%";
   }, [sideBarOpen]);
 
-  const openSidebarDropDown = () => {
+  const openSidebarDropDown = useCallback(() => {
     const sideBarDropDownElement = document.getElementsByClassName(
       "sideBarActiveDropDown"
     )[0];
     const requiredHeight = sideBarDropDownElement.firstChild.clientHeight;
     sideBarDropDownElement.style.height = requiredHeight + "px";
-  };
+  }, []);
 
   useEffect(() => {
     if (sidebarDropDownOpen) {
@@ -167,11 +167,6 @@ const Navbar = () => {
                 }`}
               >
                 <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
-                  <p>
-                    <Link className="block" to="play/buy-now">
-                      Buy Now
-                    </Link>
-                  </p>
                   <p>
                     <Link className="block" to="/play/prizes">
                       Prizes
@@ -252,7 +247,7 @@ const Navbar = () => {
               onMouseEnter={() => setActiveDropDown(4)}
               onMouseLeave={() => setActiveDropDown()}
             >
-              <p>AED</p>
+              <p>Buy Now</p>
               <FaAngleDown />
               <div
                 className={`absolute top-full left-0 py-4 ${
@@ -260,7 +255,7 @@ const Navbar = () => {
                 }`}
               >
                 <div className="w-max flex flex-col gap-4 py-2 px-4 rounded-lg bg-[#F5F5DC] min-w-[120px]">
-                  <Link className="block">Abc</Link>
+                  <Link className="block" to="play/buy-now">Abc</Link>
                   <Link className="block">Xyz</Link>
                 </div>
               </div>
